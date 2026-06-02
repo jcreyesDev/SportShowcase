@@ -1,534 +1,535 @@
 {
-    "sourceLanguage" : "en",
-    "strings" : {
-        "catalog.all_components" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "All Components"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Todos los componentes"
-                    }
-                }
-            }
+  "sourceLanguage" : "en",
+  "strings" : {
+    "catalog.all_components" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All Components"
+          }
         },
-        "catalog.search_placeholder" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Search components..."
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Buscar componentes..."
-                    }
-                }
-            }
-        },
-        "catalog.title" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Components"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Componentes"
-                    }
-                }
-            }
-        },
-        "components.buttons" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Buttons"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Botones"
-                    }
-                }
-            }
-        },
-        "components.cards" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Cards"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Tarjetas"
-                    }
-                }
-            }
-        },
-        "components.data" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Data"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Datos"
-                    }
-                }
-            }
-        },
-        "components.feedback" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Feedback"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Feedback"
-                    }
-                }
-            }
-        },
-        "components.inputs" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Inputs"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Entradas"
-                    }
-                }
-            }
-        },
-        "components.lists" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Lists"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Listas"
-                    }
-                }
-            }
-        },
-        "components.navigation" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Navigation"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Navegación"
-                    }
-                }
-            }
-        },
-        "general.app_name" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "SportShowcase"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "SportShowcase"
-                    }
-                }
-            }
-        },
-        "general.back" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Back"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Atrás"
-                    }
-                }
-            }
-        },
-        "general.cancel" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Cancel"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Cancelar"
-                    }
-                }
-            }
-        },
-        "general.delete" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Delete"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Eliminar"
-                    }
-                }
-            }
-        },
-        "general.done" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Done"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Listo"
-                    }
-                }
-            }
-        },
-        "general.edit" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Edit"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Editar"
-                    }
-                }
-            }
-        },
-        "general.error" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Something went wrong"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Algo salió mal"
-                    }
-                }
-            }
-        },
-        "general.loading" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Loading..."
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Cargando..."
-                    }
-                }
-            }
-        },
-        "general.retry" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Retry"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Reintentar"
-                    }
-                }
-            }
-        },
-        "general.save" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Save"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Guardar"
-                    }
-                }
-            }
-        },
-        "general.search" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Search"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Buscar"
-                    }
-                }
-            }
-        },
-        "settings.language" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Language"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Idioma"
-                    }
-                }
-            }
-        },
-        "settings.theme" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Theme"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Tema"
-                    }
-                }
-            }
-        },
-        "settings.theme_dark" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Dark"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Oscuro"
-                    }
-                }
-            }
-        },
-        "settings.theme_light" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Light"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Claro"
-                    }
-                }
-            }
-        },
-        "settings.theme_system" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "System"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Sistema"
-                    }
-                }
-            }
-        },
-        "settings.title" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Settings"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Ajustes"
-                    }
-                }
-            }
-        },
-        "SportShowcase" : {
-            "comment" : "The name of the app.",
-            "isCommentAutoGenerated" : true,
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "SportShowcase"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "SportShowcase"
-                    }
-                }
-            }
-        },
-        "teams.title" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Teams"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Equipos"
-                    }
-                }
-            }
-        },
-        "players.title" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Players"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Jugadores"
-                    }
-                }
-            }
-        },
-        "matches.title" : {
-            "extractionState" : "manual",
-            "localizations" : {
-                "en" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Matches"
-                    }
-                },
-                "es" : {
-                    "stringUnit" : {
-                        "state" : "translated",
-                        "value" : "Partidos"
-                    }
-                }
-            }
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todos los componentes"
+          }
         }
+      }
     },
-    "version" : "1.2"
+    "catalog.search_placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search components..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar componentes..."
+          }
+        }
+      }
+    },
+    "catalog.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Components"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Componentes"
+          }
+        }
+      }
+    },
+    "components.buttons" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buttons"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botones"
+          }
+        }
+      }
+    },
+    "components.cards" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cards"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarjetas"
+          }
+        }
+      }
+    },
+    "components.data" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datos"
+          }
+        }
+      }
+    },
+    "components.feedback" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feedback"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feedback"
+          }
+        }
+      }
+    },
+    "components.inputs" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inputs"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entradas"
+          }
+        }
+      }
+    },
+    "components.lists" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lists"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listas"
+          }
+        }
+      }
+    },
+    "components.navigation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navigation"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navegación"
+          }
+        }
+      }
+    },
+    "general.app_name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SportShowcase"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SportShowcase"
+          }
+        }
+      }
+    },
+    "general.back" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atrás"
+          }
+        }
+      }
+    },
+    "general.cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        }
+      }
+    },
+    "general.delete" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar"
+          }
+        }
+      }
+    },
+    "general.done" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listo"
+          }
+        }
+      }
+    },
+    "general.edit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar"
+          }
+        }
+      }
+    },
+    "general.error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Something went wrong"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Algo salió mal"
+          }
+        }
+      }
+    },
+    "general.loading" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando..."
+          }
+        }
+      }
+    },
+    "general.retry" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retry"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reintentar"
+          }
+        }
+      }
+    },
+    "general.save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar"
+          }
+        }
+      }
+    },
+    "general.search" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar"
+          }
+        }
+      }
+    },
+    "matches.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matches"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partidos"
+          }
+        }
+      }
+    },
+    "players.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Players"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jugadores"
+          }
+        }
+      }
+    },
+    "settings.language" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma"
+          }
+        }
+      }
+    },
+    "settings.theme" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Theme"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tema"
+          }
+        }
+      }
+    },
+    "settings.theme_dark" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oscuro"
+          }
+        }
+      }
+    },
+    "settings.theme_light" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Light"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claro"
+          }
+        }
+      }
+    },
+    "settings.theme_system" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sistema"
+          }
+        }
+      }
+    },
+    "settings.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
+          }
+        }
+      }
+    },
+    "SportShowcase" : {
+      "comment" : "The name of the app.",
+      "extractionState" : "stale",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SportShowcase"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SportShowcase"
+          }
+        }
+      }
+    },
+    "teams.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teams"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Equipos"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.2"
 }
