@@ -1,0 +1,37 @@
+[
+    {
+        "id": "lg_001",
+        "name": "Premier League",
+        "country": "England",
+        "logoURL": "https://media.api-sports.io/football/leagues/39.png",
+        "season": "2024/25"
+    },
+    {
+        "id": "lg_002",
+        "name": "La Liga",
+        "country": "Spain",
+        "logoURL": "https://media.api-sports.io/football/leagues/140.png",
+        "season": "2024/25"
+    },
+    {
+        "id": "lg_003",
+        "name": "Serie A",
+        "country": "Italy",
+        "logoURL": "https://media.api-sports.io/football/leagues/135.png",
+        "season": "2024/25"
+    },
+    {
+        "id": "lg_004",
+        "name": "Bundesliga",
+        "country": "Germany",
+        "logoURL": "https://media.api-sports.io/football/leagues/78.png",
+        "season": "2024/25"
+    },
+    {
+        "id": "lg_005",
+        "name": "Ligue 1",
+        "country": "France",
+        "logoURL": "https://media.api-sports.io/football/leagues/61.png",
+        "season": "2024/25"
+    }
+]

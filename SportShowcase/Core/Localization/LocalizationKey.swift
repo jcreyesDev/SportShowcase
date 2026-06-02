@@ -2,7 +2,7 @@ import Foundation
 
 enum L10n {
     
-        // MARK: - General
+    // MARK: - General
     enum General {
         static let appName              = String(localized: "general.app_name")
         static let cancel               = String(localized: "general.cancel")
@@ -17,14 +17,14 @@ enum L10n {
         static let retry                = String(localized: "general.retry")
     }
     
-        // MARK: - Catalog
+    // MARK: - Catalog
     enum Catalog {
         static let title                = String(localized: "catalog.title")
         static let searchPlaceholder    = String(localized: "catalog.search_placeholder")
         static let allComponents        = String(localized: "catalog.all_components")
     }
     
-        // MARK: - Components
+    // MARK: - Components
     enum Components {
         static let buttons              = String(localized: "components.buttons")
         static let cards                = String(localized: "components.cards")
@@ -35,7 +35,7 @@ enum L10n {
         static let data                 = String(localized: "components.data")
     }
     
-        // MARK: - Settings
+    // MARK: - Settings
     enum Settings {
         static let title                = String(localized: "settings.title")
         static let language             = String(localized: "settings.language")

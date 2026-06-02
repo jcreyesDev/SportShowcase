@@ -1,0 +1,122 @@
+[
+    {
+        "id": "pl_001",
+        "name": "Erling Haaland",
+        "position": "Forward",
+        "number": 9,
+        "age": 24,
+        "teamId": "tm_001",
+        "photoURL": "https://media.api-sports.io/football/players/1100.png",
+        "goals": 27,
+        "assists": 5,
+        "matches": 31
+    },
+    {
+        "id": "pl_002",
+        "name": "Kevin De Bruyne",
+        "position": "Midfielder",
+        "number": 17,
+        "age": 33,
+        "teamId": "tm_001",
+        "photoURL": "https://media.api-sports.io/football/players/627.png",
+        "goals": 5,
+        "assists": 16,
+        "matches": 28
+    },
+    {
+        "id": "pl_003",
+        "name": "Bukayo Saka",
+        "position": "Midfielder",
+        "number": 7,
+        "age": 23,
+        "teamId": "tm_002",
+        "photoURL": "https://media.api-sports.io/football/players/50008.png",
+        "goals": 14,
+        "assists": 11,
+        "matches": 35
+    },
+    {
+        "id": "pl_004",
+        "name": "Mohamed Salah",
+        "position": "Forward",
+        "number": 11,
+        "age": 32,
+        "teamId": "tm_003",
+        "photoURL": "https://media.api-sports.io/football/players/306.png",
+        "goals": 24,
+        "assists": 14,
+        "matches": 36
+    },
+    {
+        "id": "pl_005",
+        "name": "Vinicius Jr",
+        "position": "Forward",
+        "number": 7,
+        "age": 24,
+        "teamId": "tm_004",
+        "photoURL": "https://media.api-sports.io/football/players/47232.png",
+        "goals": 21,
+        "assists": 8,
+        "matches": 34
+    },
+    {
+        "id": "pl_006",
+        "name": "Kylian Mbappe",
+        "position": "Forward",
+        "number": 9,
+        "age": 26,
+        "teamId": "tm_004",
+        "photoURL": "https://media.api-sports.io/football/players/278.png",
+        "goals": 31,
+        "assists": 7,
+        "matches": 35
+    },
+    {
+        "id": "pl_007",
+        "name": "Robert Lewandowski",
+        "position": "Forward",
+        "number": 9,
+        "age": 36,
+        "teamId": "tm_005",
+        "photoURL": "https://media.api-sports.io/football/players/521.png",
+        "goals": 19,
+        "assists": 6,
+        "matches": 33
+    },
+    {
+        "id": "pl_008",
+        "name": "Harry Kane",
+        "position": "Forward",
+        "number": 9,
+        "age": 31,
+        "teamId": "tm_009",
+        "photoURL": "https://media.api-sports.io/football/players/184.png",
+        "goals": 34,
+        "assists": 12,
+        "matches": 37
+    },
+    {
+        "id": "pl_009",
+        "name": "Jamal Musiala",
+        "position": "Midfielder",
+        "number": 42,
+        "age": 22,
+        "teamId": "tm_009",
+        "photoURL": "https://media.api-sports.io/football/players/284418.png",
+        "goals": 12,
+        "assists": 15,
+        "matches": 34
+    },
+    {
+        "id": "pl_010",
+        "name": "Rafael Leao",
+        "position": "Forward",
+        "number": 10,
+        "age": 25,
+        "teamId": "tm_008",
+        "photoURL": "https://media.api-sports.io/football/players/200059.png",
+        "goals": 13,
+        "assists": 9,
+        "matches": 32
+    }
+]

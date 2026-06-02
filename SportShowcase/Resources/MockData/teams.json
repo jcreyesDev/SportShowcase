@@ -1,0 +1,92 @@
+[
+    {
+        "id": "tm_001",
+        "name": "Manchester City",
+        "city": "Manchester",
+        "leagueId": "lg_001",
+        "logoURL": "https://media.api-sports.io/football/teams/50.png",
+        "primaryColor": "#6CABDD",
+        "isFavorite": false
+    },
+    {
+        "id": "tm_002",
+        "name": "Arsenal",
+        "city": "London",
+        "leagueId": "lg_001",
+        "logoURL": "https://media.api-sports.io/football/teams/42.png",
+        "primaryColor": "#EF0107",
+        "isFavorite": false
+    },
+    {
+        "id": "tm_003",
+        "name": "Liverpool",
+        "city": "Liverpool",
+        "leagueId": "lg_001",
+        "logoURL": "https://media.api-sports.io/football/teams/40.png",
+        "primaryColor": "#C8102E",
+        "isFavorite": false
+    },
+    {
+        "id": "tm_004",
+        "name": "Real Madrid",
+        "city": "Madrid",
+        "leagueId": "lg_002",
+        "logoURL": "https://media.api-sports.io/football/teams/541.png",
+        "primaryColor": "#FEBE10",
+        "isFavorite": false
+    },
+    {
+        "id": "tm_005",
+        "name": "FC Barcelona",
+        "city": "Barcelona",
+        "leagueId": "lg_002",
+        "logoURL": "https://media.api-sports.io/football/teams/529.png",
+        "primaryColor": "#A50044",
+        "isFavorite": false
+    },
+    {
+        "id": "tm_006",
+        "name": "Atletico Madrid",
+        "city": "Madrid",
+        "leagueId": "lg_002",
+        "logoURL": "https://media.api-sports.io/football/teams/530.png",
+        "primaryColor": "#CB3524",
+        "isFavorite": false
+    },
+    {
+        "id": "tm_007",
+        "name": "Juventus",
+        "city": "Turin",
+        "leagueId": "lg_003",
+        "logoURL": "https://media.api-sports.io/football/teams/496.png",
+        "primaryColor": "#000000",
+        "isFavorite": false
+    },
+    {
+        "id": "tm_008",
+        "name": "AC Milan",
+        "city": "Milan",
+        "leagueId": "lg_003",
+        "logoURL": "https://media.api-sports.io/football/teams/489.png",
+        "primaryColor": "#FB090B",
+        "isFavorite": false
+    },
+    {
+        "id": "tm_009",
+        "name": "Bayern Munich",
+        "city": "Munich",
+        "leagueId": "lg_004",
+        "logoURL": "https://media.api-sports.io/football/teams/157.png",
+        "primaryColor": "#DC052D",
+        "isFavorite": false
+    },
+    {
+        "id": "tm_010",
+        "name": "Borussia Dortmund",
+        "city": "Dortmund",
+        "leagueId": "lg_004",
+        "logoURL": "https://media.api-sports.io/football/teams/165.png",
+        "primaryColor": "#FDE100",
+        "isFavorite": false
+    }
+]

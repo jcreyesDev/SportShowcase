@@ -1,0 +1,90 @@
+[
+    {
+        "id": "mt_001",
+        "homeTeamId": "tm_001",
+        "awayTeamId": "tm_002",
+        "homeScore": 3,
+        "awayScore": 1,
+        "date": "2025-03-15T15:00:00Z",
+        "stadium": "Etihad Stadium",
+        "round": 28,
+        "status": "finished"
+    },
+    {
+        "id": "mt_002",
+        "homeTeamId": "tm_003",
+        "awayTeamId": "tm_001",
+        "homeScore": 2,
+        "awayScore": 2,
+        "date": "2025-03-22T17:30:00Z",
+        "stadium": "Anfield",
+        "round": 29,
+        "status": "finished"
+    },
+    {
+        "id": "mt_003",
+        "homeTeamId": "tm_004",
+        "awayTeamId": "tm_005",
+        "homeScore": 2,
+        "awayScore": 1,
+        "date": "2025-04-05T20:00:00Z",
+        "stadium": "Santiago Bernabeu",
+        "round": 30,
+        "status": "finished"
+    },
+    {
+        "id": "mt_004",
+        "homeTeamId": "tm_009",
+        "awayTeamId": "tm_010",
+        "homeScore": 4,
+        "awayScore": 0,
+        "date": "2025-04-12T18:30:00Z",
+        "stadium": "Allianz Arena",
+        "round": 31,
+        "status": "finished"
+    },
+    {
+        "id": "mt_005",
+        "homeTeamId": "tm_002",
+        "awayTeamId": "tm_003",
+        "homeScore": 0,
+        "awayScore": 0,
+        "date": "2025-05-10T16:00:00Z",
+        "stadium": "Emirates Stadium",
+        "round": 36,
+        "status": "finished"
+    },
+    {
+        "id": "mt_006",
+        "homeTeamId": "tm_005",
+        "awayTeamId": "tm_006",
+        "homeScore": 1,
+        "awayScore": 2,
+        "date": "2025-05-18T20:00:00Z",
+        "stadium": "Spotify Camp Nou",
+        "round": 37,
+        "status": "finished"
+    },
+    {
+        "id": "mt_007",
+        "homeTeamId": "tm_001",
+        "awayTeamId": "tm_003",
+        "homeScore": 0,
+        "awayScore": 0,
+        "date": "2025-06-10T20:00:00Z",
+        "stadium": "Etihad Stadium",
+        "round": 38,
+        "status": "upcoming"
+    },
+    {
+        "id": "mt_008",
+        "homeTeamId": "tm_004",
+        "awayTeamId": "tm_006",
+        "homeScore": 0,
+        "awayScore": 0,
+        "date": "2025-06-12T20:00:00Z",
+        "stadium": "Santiago Bernabeu",
+        "round": 38,
+        "status": "upcoming"
+    }
+]
