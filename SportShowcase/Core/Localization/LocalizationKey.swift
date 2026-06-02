@@ -44,4 +44,19 @@ enum L10n {
         static let themeDark            = String(localized: "settings.theme_dark")
         static let themeSystem          = String(localized: "settings.theme_system")
     }
+    
+    // MARK: - Teams
+    enum Teams {
+        static let title = String(localized: "teams.title")
+    }
+    
+    // MARK: - Players
+    enum Players {
+        static let title = String(localized: "players.title")
+    }
+    
+    // MARK: - Matches
+    enum Matches {
+        static let title = String(localized: "matches.title")
+    }
 }
