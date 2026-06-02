@@ -13,7 +13,7 @@ struct SportShowcaseApp: App {
     
     var body: some Scene {
         WindowGroup {
-            Text("SportShowcase")
+            RootView()
                 .preferredColorScheme(themeManager.colorScheme)
         }
         .modelContainer(DatabaseContainer.shared)
