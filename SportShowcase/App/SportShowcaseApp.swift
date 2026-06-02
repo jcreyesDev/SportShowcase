@@ -6,6 +6,11 @@ struct SportShowcaseApp: App {
     
     @State private var themeManager = ThemeManager.shared
     
+    init() {
+        let context = DatabaseContainer.shared.mainContext
+        SeedService.seedIfNeeded(context: context)
+    }
+    
     var body: some Scene {
         WindowGroup {
             Text("SportShowcase")
