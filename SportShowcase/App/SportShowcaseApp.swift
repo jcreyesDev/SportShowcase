@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct SportShowcaseApp: App {
@@ -10,5 +11,6 @@ struct SportShowcaseApp: App {
             Text("SportShowcase")
                 .preferredColorScheme(themeManager.colorScheme)
         }
+        .modelContainer(DatabaseContainer.shared)
     }
 }
