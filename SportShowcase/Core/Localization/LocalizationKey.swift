@@ -59,4 +59,13 @@ enum L10n {
     enum Matches {
         static let title = String(localized: "matches.title")
     }
+    
+    // MARK: - Buttons
+    enum Button {
+        static let confirmed        = String(localized: "button.confirmed")
+        static let slideToConfirm   = String(localized: "button.slide_to_confirm")
+        static let slideToDelete    = String(localized: "button.slide_to_delete")
+        static let cannotUndo       = String(localized: "button.cannot_undo")
+        static let deletePermanently = String(localized: "button.delete_permanently")
+    }
 }
