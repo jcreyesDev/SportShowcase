@@ -1,6 +1,22 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "#%lld" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld — %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld — %2$lld"
+          }
+        }
+      }
+    },
     "button.cannot_undo" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -443,6 +459,57 @@
         }
       }
     },
+    "match.finished" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finished"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finalizado"
+          }
+        }
+      }
+    },
+    "match.live" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Live"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En vivo"
+          }
+        }
+      }
+    },
+    "match.upcoming" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upcoming"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Próximo"
+          }
+        }
+      }
+    },
     "matches.title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -476,6 +543,9 @@
           }
         }
       }
+    },
+    "Round %lld" : {
+
     },
     "settings.language" : {
       "extractionState" : "manual",
@@ -595,6 +665,9 @@
           }
         }
       }
+    },
+    "VS" : {
+
     }
   },
   "version" : "1.2"

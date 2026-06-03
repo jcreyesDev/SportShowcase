@@ -68,4 +68,11 @@ enum L10n {
         static let cannotUndo       = String(localized: "button.cannot_undo")
         static let deletePermanently = String(localized: "button.delete_permanently")
     }
+    
+    // MARK: - Match
+    enum Match {
+        static let finished = String(localized: "match.finished")
+        static let upcoming = String(localized: "match.upcoming")
+        static let live     = String(localized: "match.live")
+    }
 }
