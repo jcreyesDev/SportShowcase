@@ -5,17 +5,13 @@ import SwiftData
 struct SportShowcaseApp: App {
     
     @State private var themeManager = ThemeManager.shared
-    
-    init() {
-        let context = DatabaseContainer.shared.mainContext
-        SeedService.seedIfNeeded(context: context)
-    }
+    private let container = DatabaseContainer.shared
     
     var body: some Scene {
         WindowGroup {
             RootView()
                 .preferredColorScheme(themeManager.colorScheme)
         }
-        .modelContainer(DatabaseContainer.shared)
+        .modelContainer(container)
     }
 }
