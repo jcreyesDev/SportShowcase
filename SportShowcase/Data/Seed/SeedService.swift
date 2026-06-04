@@ -5,19 +5,25 @@ struct SeedService {
     
     // MARK: - Public
     static func seedIfNeeded(context: ModelContext) {
-        guard !hasSeeded() else { return }
-        
+        print("🌱 SeedService: checking if seed needed...")
+        guard !hasSeeded() else {
+            print("🌱 SeedService: already seeded, skipping")
+            return
+        }
+        print("🌱 SeedService: starting seed...")
         do {
             let leagues = try loadLeagues(context: context)
+            print("🌱 Leagues loaded: \(leagues.count)")
             let teams   = try loadTeams(context: context, leagues: leagues)
+            print("🌱 Teams loaded: \(teams.count)")
             let _       = try loadPlayers(context: context, teams: teams)
             let _       = try loadMatches(context: context, teams: teams)
             
             try context.save()
             markAsSeeded()
-            
+            print("🌱 SeedService: seed completed successfully")
         } catch {
-            print("SeedService error: \(error)")
+            print("🌱 SeedService error: \(error)")
         }
     }
     

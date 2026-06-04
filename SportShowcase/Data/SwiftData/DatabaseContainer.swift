@@ -11,10 +11,14 @@ struct DatabaseContainer {
             Match.self
         ])
         
-        let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        let config = ModelConfiguration(schema: schema,
+                                        isStoredInMemoryOnly: false)
         
         do {
-            return try ModelContainer(for: schema, configurations: config)
+            let container = try ModelContainer(for: schema,
+                                               configurations: config)
+            SeedService.seedIfNeeded(context: container.mainContext)
+            return container
         } catch {
             fatalError("Failed to create ModelContainer: \(error)")
         }
