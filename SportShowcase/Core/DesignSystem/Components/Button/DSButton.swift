@@ -54,6 +54,7 @@ struct DSButton: View {
     var isFullWidth: Bool        = false
     var isLoading: Bool          = false
     var isDisabled: Bool         = false
+    var tintColor: Color         = DSColor.accent
     let action: () -> Void
     
     var body: some View {
@@ -104,7 +105,7 @@ struct DSButton: View {
     // MARK: - Style helpers
     private var backgroundColor: Color {
         switch style {
-            case .filled:      return DSColor.accent
+            case .filled:      return tintColor
             case .outlined:    return .clear
             case .ghost:       return .clear
             case .destructive: return DSColor.Semantic.error
@@ -114,8 +115,8 @@ struct DSButton: View {
     private var foregroundColor: Color {
         switch style {
             case .filled:      return DSColor.Text.onAccent
-            case .outlined:    return DSColor.accent
-            case .ghost:       return DSColor.accent
+            case .outlined:    return tintColor
+            case .ghost:       return tintColor
             case .destructive: return DSColor.Text.onAccent
         }
     }
@@ -123,7 +124,7 @@ struct DSButton: View {
     private var borderColor: Color {
         switch style {
             case .filled:      return .clear
-            case .outlined:    return DSColor.accent
+            case .outlined:    return tintColor
             case .ghost:       return .clear
             case .destructive: return .clear
         }
