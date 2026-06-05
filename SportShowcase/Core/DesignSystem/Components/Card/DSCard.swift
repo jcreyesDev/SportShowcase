@@ -116,3 +116,14 @@ struct DSCard<Content: View>: View {
         }
     }
 }
+
+extension DSCardStyle: CustomStringConvertible {
+    public var description: String {
+        switch self {
+            case .elevated: return "Elevated"
+            case .filled:   return "Filled"
+            case .outlined: return "Outlined"
+            case .glass:    return "Glass"
+        }
+    }
+}

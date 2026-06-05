@@ -40,6 +40,7 @@ struct DSLoader: View {
             }
         }
         .onAppear { isAnimating = true }
+        .onDisappear { isAnimating = false }
     }
     
     // MARK: - Loader content

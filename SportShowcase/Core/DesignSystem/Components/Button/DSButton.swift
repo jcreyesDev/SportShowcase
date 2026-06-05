@@ -131,6 +131,27 @@ struct DSButton: View {
     }
 }
 
+extension DSButtonStyle: CustomStringConvertible {
+    public var description: String {
+        switch self {
+            case .filled:      return "Filled"
+            case .outlined:    return "Outlined"
+            case .ghost:       return "Ghost"
+            case .destructive: return "Destructive"
+        }
+    }
+}
+
+extension DSButtonSize: CustomStringConvertible {
+    public var description: String {
+        switch self {
+            case .small:  return "Small"
+            case .medium: return "Medium"
+            case .large:  return "Large"
+        }
+    }
+}
+
 #Preview("Styles") {
     VStack(spacing: DSSpacing.lg) {
         DSButton(title: "Filled Button", style: .filled) {}
