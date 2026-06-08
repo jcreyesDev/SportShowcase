@@ -1,8 +1,3 @@
-    //
-    //  DSBreadcrumb.swift
-    //  SportShowcase
-    //
-
 import SwiftUI
 
 struct DSBreadcrumbItem: Identifiable {

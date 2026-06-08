@@ -1,8 +1,3 @@
-    //
-    //  ShowcaseSection.swift
-    //  SportShowcase
-    //
-
 import SwiftUI
 
 struct ShowcaseSection<Content: View>: View {

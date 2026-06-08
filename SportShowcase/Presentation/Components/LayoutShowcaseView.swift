@@ -1,8 +1,3 @@
-    //
-    //  LayoutShowcaseView.swift
-    //  SportShowcase
-    //
-
 import SwiftUI
 
 struct LayoutShowcaseView: View {

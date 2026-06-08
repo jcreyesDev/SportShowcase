@@ -1,8 +1,3 @@
-    //
-    //  RootView.swift
-    //  SportShowcase
-    //
-
 import SwiftUI
 import SwiftData
 
