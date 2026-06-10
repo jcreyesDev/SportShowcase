@@ -38,6 +38,7 @@ struct CatalogView: View {
                 category.destination
             }
         }
+        .coachMarkOverlay(key: "playground_onboarding")
     }
     
     private func categoryCard(_ category: ComponentCategory) -> some View {

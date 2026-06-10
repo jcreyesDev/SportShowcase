@@ -41,7 +41,7 @@ struct SettingsView: View {
                                    iconColor: DSColor.Semantic.success,
                                    accessory: .chevron,
                                    onTap: {
-                                       DSCoachMarkManager.shared.reset(key: "main_onboarding")
+                                       DSCoachMarkManager.shared.reset(key: "playground_onboarding")
                                    })
                     ], header: "General")
                     

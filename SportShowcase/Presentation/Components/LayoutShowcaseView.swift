@@ -30,6 +30,7 @@ struct LayoutShowcaseView: View {
                                 style: .dots,
                                 tintColor: DSColor.accent)
             }
+            .pagerCoachMarkTarget(id: "cm_pager")
             .padding(.vertical, DSSpacing.sm)
             .frame(maxWidth: .infinity)
             .background(DSColor.Background.card)
