@@ -104,3 +104,15 @@ struct CompactValueRow: View {
             .padding(.horizontal, DSSpacing.md)
     }
 }
+
+extension View {
+    func pagerCoachMarkTarget(id: String) -> some View {
+        background(GeometryReader { geo in
+            Color.clear.preference(
+                key: DSCoachMarkPreferenceKey.self,
+                value: [DSCoachMarkAnchor(id: id,
+                                          frame: geo.frame(in: .global)
+                    .offsetBy(dx: 0, dy: -60))])
+        })
+    }
+}

@@ -25,12 +25,32 @@ struct ComponentPlaygroundView<Preview: View, Controls: View>: View {
     
     @State private var showInfo = false
     
+    private let onboardingKey = "playground_onboarding"
+    
+    private let onboardingSteps: [DSCoachMarkStep] = [
+        DSCoachMarkStep(id: "cm_pager",
+                        title: "Swipe to explore",
+                        message: "Swipe left or right to navigate between the components in this category."),
+        DSCoachMarkStep(id: "cm_preview",
+                        title: "Live Preview",
+                        message: "This is the component — it updates in real time as you change the controls below."),
+        DSCoachMarkStep(id: "cm_config",
+                        title: "Configuration",
+                        message: "Use these controls to modify style, size, state and more."),
+        DSCoachMarkStep(id: "cm_about",
+                        title: "About",
+                        message: "Tap here to learn when to use this component and best practices.")
+    ]
+    
     var body: some View {
         ScrollView {
             VStack(spacing: DSSpacing.lg) {
                 previewArea
+                    .background(anchorBackground(id: "cm_preview"))
                 controlsSection
+                    .background(anchorBackground(id: "cm_config"))
                 infoSection
+                    .background(anchorBackground(id: "cm_about"))
             }
             .padding(.horizontal, DSSpacing.sm)
             .padding(.vertical, DSSpacing.lg)
@@ -38,6 +58,26 @@ struct ComponentPlaygroundView<Preview: View, Controls: View>: View {
         .navigationTitle(info.name)
         .navigationBarTitleDisplayMode(.inline)
         .background(DSColor.Background.primary)
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                DSCoachMarkManager.shared.start(steps: onboardingSteps,
+                                                key: onboardingKey)
+            }
+        }
+    }
+    
+    private func anchorBackground(id: String) -> some View {
+        GeometryReader { geo in
+            let topInset = (UIApplication.shared.connectedScenes
+                .compactMap { $0 as? UIWindowScene }
+                .first?.windows.first?.safeAreaInsets.top ?? 0)
+            
+            Color.clear.preference(
+                key: DSCoachMarkPreferenceKey.self,
+                value: [DSCoachMarkAnchor(id: id,
+                                          frame: geo.frame(in: .global)
+                    .offsetBy(dx: 0, dy: -topInset))])
+        }
     }
     
         // MARK: - Preview area

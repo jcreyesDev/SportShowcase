@@ -1,13 +1,13 @@
 import SwiftUI
 
-// MARK: - Coach Mark Step
+    // MARK: - Coach Mark Step
 struct DSCoachMarkStep: Identifiable {
     let id: String
     let title: String
     let message: String
 }
 
-// MARK: - Anchor preference
+    // MARK: - Anchor preference
 struct DSCoachMarkAnchor: Equatable {
     let id: String
     let frame: CGRect
@@ -21,7 +21,7 @@ struct DSCoachMarkPreferenceKey: PreferenceKey {
     }
 }
 
-// MARK: - Target modifier
+    // MARK: - Target modifier
 struct DSCoachMarkTargetModifier: ViewModifier {
     let id: String
     
@@ -42,16 +42,16 @@ extension View {
     }
 }
 
-// MARK: - Manager
+    // MARK: - Manager
 @Observable
 class DSCoachMarkManager {
     
-    static let shared  = DSCoachMarkManager()
-    var isActive       = false
-    var stepIndex      = 0
-    var steps: [DSCoachMarkStep]     = []
+    static let shared = DSCoachMarkManager()
+    var isActive      = false
+    var stepIndex     = 0
+    var steps:   [DSCoachMarkStep]  = []
     var anchors: [DSCoachMarkAnchor] = []
-    private let key    = "coachmark_done"
+    private let storageKey = "coachmark_done"
     
     private init() {}
     
@@ -91,7 +91,7 @@ class DSCoachMarkManager {
     func reset(key: String) {
         var done = doneKeys()
         done.removeAll { $0 == key }
-        UserDefaults.standard.set(done, forKey: self.key)
+        UserDefaults.standard.set(done, forKey: storageKey)
         isActive = false
     }
     
@@ -105,59 +105,67 @@ class DSCoachMarkManager {
     private func markDone(_ key: String) {
         var done = doneKeys()
         done.append(key)
-        UserDefaults.standard.set(done, forKey: self.key)
+        UserDefaults.standard.set(done, forKey: storageKey)
     }
     
     private func doneKeys() -> [String] {
-        UserDefaults.standard.stringArray(forKey: key) ?? []
+        UserDefaults.standard.stringArray(forKey: storageKey) ?? []
     }
 }
 
-// MARK: - Overlay
+    // MARK: - Overlay
 struct DSCoachMarkOverlay: View {
     
-    @State private var manager = DSCoachMarkManager.shared
     let onboardingKey: String
     
+        // Acceso directo al singleton — @Observable lo trackea correctamente
+    private var manager: DSCoachMarkManager { DSCoachMarkManager.shared }
+    
     var body: some View {
-        GeometryReader { geo in
+            // TimelineView fuerza re-renders para que @Observable sea detectado
+        TimelineView(.animation(minimumInterval: 0.1, paused: !manager.isActive)) { _ in
             if manager.isActive,
                let step   = manager.currentStep,
                let anchor = manager.currentAnchor {
                 
                 ZStack {
-                    // Dim layer
-                    Color.black.opacity(0.65)
-                        .ignoresSafeArea()
-                        .mask(alignment: .topLeading) {
-                            Rectangle()
-                                .fill(Color.white)
-                                .overlay(alignment: .topLeading) {
-                                    RoundedRectangle(cornerRadius: DSRadius.md)
-                                        .fill(Color.black)
-                                        .frame(width: anchor.frame.width + 20,
-                                               height: anchor.frame.height + 20)
-                                        .offset(x: anchor.frame.minX - 10,
-                                                y: anchor.frame.minY - 10)
-                                }
-                                .compositingGroup()
-                                .luminanceToAlpha()
-                        }
-                        .onTapGesture { manager.next(key: onboardingKey) }
-                    
-                    // Bubble
-                    bubbleView(step: step,
-                               anchor: anchor,
-                               screenSize: geo.size)
+                    dimLayer(anchor: anchor)
+                    GeometryReader { geo in
+                        bubbleView(step: step,
+                                   anchor: anchor,
+                                   screenSize: geo.size)
+                    }
                 }
                 .animation(.spring(response: 0.4, dampingFraction: 0.8),
                            value: manager.stepIndex)
+                .transition(.opacity)
             }
         }
-        .ignoresSafeArea()
     }
     
-    // MARK: - Bubble
+        // MARK: - Dim layer
+    private func dimLayer(anchor: DSCoachMarkAnchor) -> some View {
+        Color.black.opacity(0.65)
+            .ignoresSafeArea()
+            .mask {
+                ZStack {
+                    Color.white
+                        .ignoresSafeArea()
+                    
+                    RoundedRectangle(cornerRadius: DSRadius.md)
+                        .fill(Color.black)
+                        .frame(width:  anchor.frame.width  + 20,
+                               height: anchor.frame.height + 20)
+                        .position(x: anchor.frame.midX,
+                                  y: anchor.frame.midY)
+                }
+                .compositingGroup()
+                .luminanceToAlpha()
+            }
+            .onTapGesture { manager.next(key: onboardingKey) }
+    }
+    
+        // MARK: - Bubble
     private func bubbleView(step: DSCoachMarkStep,
                             anchor: DSCoachMarkAnchor,
                             screenSize: CGSize) -> some View {
@@ -211,7 +219,8 @@ struct DSCoachMarkOverlay: View {
                         .foregroundStyle(DSColor.Text.tertiary)
                 }
                 
-                DSButton(title: manager.stepIndex == manager.steps.count - 1 ? "Got it!" : "Next",
+                DSButton(title: manager.stepIndex == manager.steps.count - 1
+                         ? "Got it!" : "Next",
                          style: .filled,
                          size: .small) {
                     manager.next(key: onboardingKey)
@@ -233,13 +242,16 @@ struct DSCoachMarkOverlay: View {
     }
 }
 
-// MARK: - View modifier
+    // MARK: - View modifier
 struct DSCoachMarkModifier: ViewModifier {
     let key: String
     
     func body(content: Content) -> some View {
         content
-            .overlay { DSCoachMarkOverlay(onboardingKey: key).zIndex(1000) }
+            .overlay {
+                DSCoachMarkOverlay(onboardingKey: key)
+                    .zIndex(1000)
+            }
             .onPreferenceChange(DSCoachMarkPreferenceKey.self) { anchors in
                 DSCoachMarkManager.shared.anchors = anchors
             }
