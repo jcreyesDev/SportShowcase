@@ -3,31 +3,119 @@ import Foundation
 
 struct SeedService {
     
-    // MARK: - Public
     static func seedIfNeeded(context: ModelContext) {
-        print("🌱 SeedService: checking if seed needed...")
         guard !hasSeeded() else {
-            print("🌱 SeedService: already seeded, skipping")
             return
         }
-        print("🌱 SeedService: starting seed...")
         do {
-            let leagues = try loadLeagues(context: context)
-            print("🌱 Leagues loaded: \(leagues.count)")
-            let teams   = try loadTeams(context: context, leagues: leagues)
-            print("🌱 Teams loaded: \(teams.count)")
-            let _       = try loadPlayers(context: context, teams: teams)
-            let _       = try loadMatches(context: context, teams: teams)
-            
+            let leagues  = try loadLeagues(context: context)
+            let teams    = try loadTeams(context: context, leagues: leagues)
+            _            = try loadPlayers(context: context, teams: teams)
+            _            = try loadMatches(context: context, teams: teams)
             try context.save()
             markAsSeeded()
-            print("🌱 SeedService: seed completed successfully")
         } catch {
             print("🌱 SeedService error: \(error)")
         }
     }
     
-    // MARK: - Private helpers
+        // MARK: - Leagues
+    private static func loadLeagues(context: ModelContext) throws -> [League] {
+        let footballLeagues  = try load([LeagueDTO].self, from: "leagues")
+        let basketballLeagues = try load([LeagueDTO].self, from: "basketball_league")
+        let tennisLeagues    = try load([LeagueDTO].self, from: "tennis_league")
+        
+        let allDTOs = footballLeagues + basketballLeagues + tennisLeagues
+        return allDTOs.map { dto in
+            let league = League(id: dto.id,
+                                name: dto.name,
+                                country: dto.country,
+                                logoURL: dto.logoURL,
+                                season: dto.season)
+            context.insert(league)
+            return league
+        }
+    }
+    
+        // MARK: - Teams
+    private static func loadTeams(context: ModelContext,
+                                  leagues: [League]) throws -> [Team] {
+        let footballTeams    = try load([TeamDTO].self, from: "teams")
+        let basketballTeams  = try load([TeamDTO].self, from: "basketball_teams")
+        let tennisTeams      = try load([TeamDTO].self, from: "tennis_teams")
+        
+        let allDTOs = footballTeams + basketballTeams + tennisTeams
+        return allDTOs.compactMap { dto in
+            let team = Team(id: dto.id,
+                            name: dto.name,
+                            city: dto.city,
+                            logoURL: dto.logoURL,
+                            primaryColor: dto.primaryColor)
+            team.league = leagues.first { $0.id == dto.leagueId }
+            context.insert(team)
+            return team
+        }
+    }
+    
+        // MARK: - Players
+    private static func loadPlayers(context: ModelContext,
+                                    teams: [Team]) throws -> [Player] {
+        let footballPlayers   = try load([PlayerDTO].self, from: "players")
+        let basketballPlayers = try load([PlayerDTO].self, from: "basketball_players")
+        let tennisPlayers     = try load([PlayerDTO].self, from: "tennis_players")
+        
+        let allDTOs = footballPlayers + basketballPlayers + tennisPlayers
+        return allDTOs.compactMap { dto in
+            let player = Player(id: dto.id,
+                                name: dto.name,
+                                position: dto.position,
+                                number: dto.number,
+                                age: dto.age,
+                                photoURL: dto.photoURL,
+                                goals: dto.goals,
+                                assists: dto.assists,
+                                matches: dto.matches)
+            player.team = teams.first { $0.id == dto.teamId }
+            context.insert(player)
+            return player
+        }
+    }
+    
+        // MARK: - Matches
+    private static func loadMatches(context: ModelContext,
+                                    teams: [Team]) throws -> [Match] {
+        let footballMatches   = try load([MatchDTO].self, from: "matches")
+        let basketballMatches = try load([MatchDTO].self, from: "basketball_matches")
+        let tennisMatches     = try load([MatchDTO].self, from: "tennis_matches")
+        
+        let allDTOs = footballMatches + basketballMatches + tennisMatches
+        return allDTOs.compactMap { dto in
+            let match = Match(id: dto.id,
+                              date: dto.parsedDate,
+                              stadium: dto.stadium,
+                              round: dto.round,
+                              status: dto.status,
+                              homeScore: dto.homeScore,
+                              awayScore: dto.awayScore)
+            match.homeTeam = teams.first { $0.id == dto.homeTeamId }
+            match.awayTeam = teams.first { $0.id == dto.awayTeamId }
+            context.insert(match)
+            return match
+        }
+    }
+    
+        // MARK: - Generic loader
+    private static func load<T: Decodable>(_ type: T.Type,
+                                           from filename: String) throws -> T {
+        guard let url = Bundle.main.url(forResource: filename,
+                                        withExtension: "json") else {
+            throw SeedError.fileNotFound(filename)
+        }
+        let data = try Data(contentsOf: url)
+        return try JSONDecoder().decode(type, from: data)
+    }
+    
+        // MARK: - Persistence
     private static func hasSeeded() -> Bool {
         UserDefaults.standard.bool(forKey: "db_seeded")
     }
@@ -36,121 +124,34 @@ struct SeedService {
         UserDefaults.standard.set(true, forKey: "db_seeded")
     }
     
-    // MARK: - Loaders
-    private static func loadLeagues(context: ModelContext) throws -> [String: League] {
-        let items: [LeagueJSON] = try decode("leagues")
-        var map: [String: League] = [:]
-        
-        for item in items {
-            let league = League(id: item.id,
-                                name: item.name,
-                                country: item.country,
-                                logoURL: item.logoURL,
-                                season: item.season)
-            context.insert(league)
-            map[item.id] = league
-        }
-        
-        return map
-    }
-    
-    private static func loadTeams(context: ModelContext, leagues: [String: League]) throws -> [String: Team] {
-        let items: [TeamJSON] = try decode("teams")
-        var map: [String: Team] = [:]
-        
-        for item in items {
-            let team = Team(id: item.id,
-                            name: item.name,
-                            city: item.city,
-                            logoURL: item.logoURL,
-                            primaryColor: item.primaryColor,
-                            isFavorite: item.isFavorite)
-            team.league = leagues[item.leagueId]
-            context.insert(team)
-            map[item.id] = team
-        }
-        
-        return map
-    }
-    
-    private static func loadPlayers(context: ModelContext, teams: [String: Team]) throws -> [Player] {
-        let items: [PlayerJSON] = try decode("players")
-        var result: [Player] = []
-        
-        for item in items {
-            let player = Player(id: item.id,
-                                name: item.name,
-                                position: item.position,
-                                number: item.number,
-                                age: item.age,
-                                photoURL: item.photoURL,
-                                goals: item.goals,
-                                assists: item.assists,
-                                matches: item.matches)
-            player.team = teams[item.teamId]
-            context.insert(player)
-            result.append(player)
-        }
-        
-        return result
-    }
-    
-    private static func loadMatches(context: ModelContext, teams: [String: Team]) throws -> [Match] {
-        let items: [MatchJSON] = try decode("matches")
-        var result: [Match] = []
-        
-        let formatter = ISO8601DateFormatter()
-        
-        for item in items {
-            let match = Match(id: item.id,
-                              date: formatter.date(from: item.date) ?? Date(),
-                              stadium: item.stadium,
-                              round: item.round,
-                              status: item.status,
-                              homeScore: item.homeScore,
-                              awayScore: item.awayScore)
-            match.homeTeam = teams[item.homeTeamId]
-            match.awayTeam = teams[item.awayTeamId]
-            context.insert(match)
-            result.append(match)
-        }
-        
-        return result
-    }
-    
-    // MARK: - JSON Decoder
-    private static func decode<T: Decodable>(_ filename: String) throws -> T {
-        guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
-            throw SeedError.fileNotFound(filename)
-        }
-        
-        let data = try Data(contentsOf: url)
-        
-        return try JSONDecoder().decode(T.self, from: data)
+    enum SeedError: Error {
+        case fileNotFound(String)
     }
 }
 
-// MARK: - Errors
-enum SeedError: Error {
-    case fileNotFound(String)
-}
-
-// MARK: - JSON DTOs
-private struct LeagueJSON: Decodable {
+    // MARK: - DTOs
+private struct LeagueDTO: Decodable {
     let id, name, country, logoURL, season: String
 }
 
-private struct TeamJSON: Decodable {
-    let id, name, city, leagueId, logoURL, primaryColor: String
-    let isFavorite: Bool
+private struct TeamDTO: Decodable {
+    let id, name, city, logoURL, primaryColor, leagueId: String
 }
 
-private struct PlayerJSON: Decodable {
-    let id, name, position, photoURL, teamId: String
-    let number, age, goals, assists, matches: Int
+private struct PlayerDTO: Decodable {
+    let id, name, position: String
+    let number, age: Int
+    let teamId, photoURL: String
+    let goals, assists, matches: Int
 }
 
-private struct MatchJSON: Decodable {
-    let id, homeTeamId, awayTeamId, date, stadium, status: String
-    let homeScore, awayScore, round: Int
+private struct MatchDTO: Decodable {
+    let id, homeTeamId, awayTeamId: String
+    let date, stadium, status: String
+    let round, homeScore, awayScore: Int
+    
+    var parsedDate: Date {
+        let formatter = ISO8601DateFormatter()
+        return formatter.date(from: date) ?? Date()
+    }
 }

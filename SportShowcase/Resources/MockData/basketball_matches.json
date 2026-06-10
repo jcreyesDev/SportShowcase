@@ -1,0 +1,35 @@
+[
+    {
+        "id": "bkm_001",
+        "homeTeamId": "bkt_001",
+        "awayTeamId": "bkt_002",
+        "date": "2025-04-10T20:00:00Z",
+        "stadium": "Crypto.com Arena",
+        "round": 1,
+        "status": "finished",
+        "homeScore": 112,
+        "awayScore": 108
+    },
+    {
+        "id": "bkm_002",
+        "homeTeamId": "bkt_003",
+        "awayTeamId": "bkt_004",
+        "date": "2025-04-12T19:30:00Z",
+        "stadium": "TD Garden",
+        "round": 1,
+        "status": "finished",
+        "homeScore": 98,
+        "awayScore": 104
+    },
+    {
+        "id": "bkm_003",
+        "homeTeamId": "bkt_005",
+        "awayTeamId": "bkt_006",
+        "date": "2026-06-20T20:00:00Z",
+        "stadium": "United Center",
+        "round": 2,
+        "status": "upcoming",
+        "homeScore": 0,
+        "awayScore": 0
+    }
+]

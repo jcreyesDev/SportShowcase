@@ -1,0 +1,35 @@
+[
+    {
+        "id": "tnm_001",
+        "homeTeamId": "tnp_001",
+        "awayTeamId": "tnp_002",
+        "date": "2025-06-08T14:00:00Z",
+        "stadium": "Roland Garros",
+        "round": 1,
+        "status": "finished",
+        "homeScore": 3,
+        "awayScore": 1
+    },
+    {
+        "id": "tnm_002",
+        "homeTeamId": "tnp_003",
+        "awayTeamId": "tnp_004",
+        "date": "2025-07-05T13:00:00Z",
+        "stadium": "Wimbledon",
+        "round": 1,
+        "status": "finished",
+        "homeScore": 2,
+        "awayScore": 3
+    },
+    {
+        "id": "tnm_003",
+        "homeTeamId": "tnp_002",
+        "awayTeamId": "tnp_003",
+        "date": "2026-08-25T15:00:00Z",
+        "stadium": "US Open",
+        "round": 2,
+        "status": "upcoming",
+        "homeScore": 0,
+        "awayScore": 0
+    }
+]

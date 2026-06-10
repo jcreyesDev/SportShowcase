@@ -11,6 +11,9 @@ struct SportShowcaseApp: App {
         WindowGroup {
             RootView()
                 .preferredColorScheme(themeManager.colorScheme)
+                .onAppear {
+                    SeedService.seedIfNeeded(context: container.mainContext)
+                }
         }
         .modelContainer(container)
     }

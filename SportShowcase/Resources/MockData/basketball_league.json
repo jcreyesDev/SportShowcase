@@ -1,0 +1,9 @@
+[
+    {
+        "id": "lg_nba",
+        "name": "NBA",
+        "country": "USA",
+        "logoURL": "https://media.api-sports.io/basketball/leagues/12.png",
+        "season": "2024/25"
+    }
+]

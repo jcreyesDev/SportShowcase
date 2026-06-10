@@ -1,0 +1,50 @@
+[
+    {
+        "id": "bkt_001",
+        "name": "Los Angeles Lakers",
+        "city": "Los Angeles",
+        "logoURL": "https://media.api-sports.io/basketball/teams/139.png",
+        "primaryColor": "#552583",
+        "leagueId": "lg_nba"
+    },
+    {
+        "id": "bkt_002",
+        "name": "Golden State Warriors",
+        "city": "San Francisco",
+        "logoURL": "https://media.api-sports.io/basketball/teams/145.png",
+        "primaryColor": "#1D428A",
+        "leagueId": "lg_nba"
+    },
+    {
+        "id": "bkt_003",
+        "name": "Boston Celtics",
+        "city": "Boston",
+        "logoURL": "https://media.api-sports.io/basketball/teams/133.png",
+        "primaryColor": "#007A33",
+        "leagueId": "lg_nba"
+    },
+    {
+        "id": "bkt_004",
+        "name": "Miami Heat",
+        "city": "Miami",
+        "logoURL": "https://media.api-sports.io/basketball/teams/154.png",
+        "primaryColor": "#98002E",
+        "leagueId": "lg_nba"
+    },
+    {
+        "id": "bkt_005",
+        "name": "Chicago Bulls",
+        "city": "Chicago",
+        "logoURL": "https://media.api-sports.io/basketball/teams/134.png",
+        "primaryColor": "#CE1141",
+        "leagueId": "lg_nba"
+    },
+    {
+        "id": "bkt_006",
+        "name": "New York Knicks",
+        "city": "New York",
+        "logoURL": "https://media.api-sports.io/basketball/teams/160.png",
+        "primaryColor": "#F58426",
+        "leagueId": "lg_nba"
+    }
+]

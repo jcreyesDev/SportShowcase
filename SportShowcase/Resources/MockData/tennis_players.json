@@ -1,0 +1,50 @@
+[
+    {
+        "id": "tnpl_001",
+        "name": "Novak Djokovic",
+        "position": "Right-handed",
+        "number": 1,
+        "age": 37,
+        "teamId": "tnp_001",
+        "photoURL": "https://media.api-sports.io/tennis/players/1.png",
+        "goals": 24,
+        "assists": 0,
+        "matches": 18
+    },
+    {
+        "id": "tnpl_002",
+        "name": "Carlos Alcaraz",
+        "position": "Right-handed",
+        "number": 2,
+        "age": 21,
+        "teamId": "tnp_002",
+        "photoURL": "https://media.api-sports.io/tennis/players/2.png",
+        "goals": 4,
+        "assists": 0,
+        "matches": 22
+    },
+    {
+        "id": "tnpl_003",
+        "name": "Jannik Sinner",
+        "position": "Right-handed",
+        "number": 3,
+        "age": 22,
+        "teamId": "tnp_003",
+        "photoURL": "https://media.api-sports.io/tennis/players/3.png",
+        "goals": 3,
+        "assists": 0,
+        "matches": 20
+    },
+    {
+        "id": "tnpl_004",
+        "name": "Daniil Medvedev",
+        "position": "Right-handed",
+        "number": 4,
+        "age": 28,
+        "teamId": "tnp_004",
+        "photoURL": "https://media.api-sports.io/tennis/players/4.png",
+        "goals": 1,
+        "assists": 0,
+        "matches": 19
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "id": "lg_atp",
+        "name": "ATP Tour",
+        "country": "International",
+        "logoURL": "https://media.api-sports.io/tennis/leagues/1.png",
+        "season": "2025"
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "id": "bkp_001",
+        "name": "LeBron James",
+        "position": "Forward",
+        "number": 23,
+        "age": 40,
+        "teamId": "bkt_001",
+        "photoURL": "https://media.api-sports.io/basketball/players/3.png",
+        "goals": 28,
+        "assists": 8,
+        "matches": 71
+    },
+    {
+        "id": "bkp_002",
+        "name": "Stephen Curry",
+        "position": "Guard",
+        "number": 30,
+        "age": 36,
+        "teamId": "bkt_002",
+        "photoURL": "https://media.api-sports.io/basketball/players/90.png",
+        "goals": 26,
+        "assists": 5,
+        "matches": 74
+    },
+    {
+        "id": "bkp_003",
+        "name": "Jayson Tatum",
+        "position": "Forward",
+        "number": 0,
+        "age": 26,
+        "teamId": "bkt_003",
+        "photoURL": "https://media.api-sports.io/basketball/players/160.png",
+        "goals": 27,
+        "assists": 5,
+        "matches": 74
+    },
+    {
+        "id": "bkp_004",
+        "name": "Bam Adebayo",
+        "position": "Center",
+        "number": 13,
+        "age": 27,
+        "teamId": "bkt_004",
+        "photoURL": "https://media.api-sports.io/basketball/players/91.png",
+        "goals": 19,
+        "assists": 4,
+        "matches": 71
+    },
+    {
+        "id": "bkp_005",
+        "name": "Zach LaVine",
+        "position": "Guard",
+        "number": 8,
+        "age": 29,
+        "teamId": "bkt_005",
+        "photoURL": "https://media.api-sports.io/basketball/players/149.png",
+        "goals": 24,
+        "assists": 5,
+        "matches": 68
+    },
+    {
+        "id": "bkp_006",
+        "name": "Jalen Brunson",
+        "position": "Guard",
+        "number": 11,
+        "age": 27,
+        "teamId": "bkt_006",
+        "photoURL": "https://media.api-sports.io/basketball/players/192.png",
+        "goals": 29,
+        "assists": 7,
+        "matches": 77
+    }
+]

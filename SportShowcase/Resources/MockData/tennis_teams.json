@@ -1,0 +1,34 @@
+[
+    {
+        "id": "tnp_001",
+        "name": "Novak Djokovic",
+        "city": "Serbia",
+        "logoURL": "https://media.api-sports.io/tennis/players/1.png",
+        "primaryColor": "#C8102E",
+        "leagueId": "lg_atp"
+    },
+    {
+        "id": "tnp_002",
+        "name": "Carlos Alcaraz",
+        "city": "Spain",
+        "logoURL": "https://media.api-sports.io/tennis/players/2.png",
+        "primaryColor": "#AA151B",
+        "leagueId": "lg_atp"
+    },
+    {
+        "id": "tnp_003",
+        "name": "Jannik Sinner",
+        "city": "Italy",
+        "logoURL": "https://media.api-sports.io/tennis/players/3.png",
+        "primaryColor": "#009246",
+        "leagueId": "lg_atp"
+    },
+    {
+        "id": "tnp_004",
+        "name": "Daniil Medvedev",
+        "city": "Russia",
+        "logoURL": "https://media.api-sports.io/tennis/players/4.png",
+        "primaryColor": "#0039A6",
+        "leagueId": "lg_atp"
+    }
+]
