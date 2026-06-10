@@ -214,13 +214,12 @@ struct DSCoachMarkOverlay: View {
                 .frame(maxWidth: .infinity)
                 
                 Button { manager.skip(key: onboardingKey) } label: {
-                    Text("Skip")
+                    Text(L10n.CoachMark.skip)
                         .font(DSFont.footnote)
                         .foregroundStyle(DSColor.Text.tertiary)
                 }
                 
-                DSButton(title: manager.stepIndex == manager.steps.count - 1
-                         ? "Got it!" : "Next",
+                DSButton(title: manager.stepIndex == manager.steps.count - 1 ? L10n.CoachMark.gotIt : L10n.CoachMark.next,
                          style: .filled,
                          size: .small) {
                     manager.next(key: onboardingKey)

@@ -29,17 +29,17 @@ struct ComponentPlaygroundView<Preview: View, Controls: View>: View {
     
     private let onboardingSteps: [DSCoachMarkStep] = [
         DSCoachMarkStep(id: "cm_pager",
-                        title: "Swipe to explore",
-                        message: "Swipe left or right to navigate between the components in this category."),
+                        title: L10n.CoachMark.swipeTitle,
+                        message: L10n.CoachMark.swipeMessage),
         DSCoachMarkStep(id: "cm_preview",
-                        title: "Live Preview",
-                        message: "This is the component — it updates in real time as you change the controls below."),
+                        title: L10n.CoachMark.livePreviewTitle,
+                        message: L10n.CoachMark.livePreviewMessage),
         DSCoachMarkStep(id: "cm_config",
-                        title: "Configuration",
-                        message: "Use these controls to modify style, size, state and more."),
+                        title: L10n.CoachMark.configTitle,
+                        message: L10n.CoachMark.configMessage),
         DSCoachMarkStep(id: "cm_about",
-                        title: "About",
-                        message: "Tap here to learn when to use this component and best practices.")
+                        title: L10n.CoachMark.aboutTitle,
+                        message: L10n.CoachMark.aboutMessage)
     ]
     
     var body: some View {
@@ -84,7 +84,7 @@ struct ComponentPlaygroundView<Preview: View, Controls: View>: View {
     private var previewArea: some View {
         VStack(spacing: 0) {
             HStack {
-                Text("Preview")
+                Text(L10n.Playground.preview)
                     .font(.system(size: 10, weight: .semibold))
                     .foregroundStyle(DSColor.accent)
                     .textCase(.uppercase)
@@ -113,7 +113,7 @@ struct ComponentPlaygroundView<Preview: View, Controls: View>: View {
             .padding(.bottom, DSSpacing.md)
             .frame(minHeight: 160)
             
-            Text("Interact with the controls below")
+            Text(L10n.Playground.interact)
                 .font(.system(size: 11))
                 .foregroundStyle(DSColor.Text.tertiary)
                 .padding(.bottom, DSSpacing.md)
@@ -132,7 +132,7 @@ struct ComponentPlaygroundView<Preview: View, Controls: View>: View {
                 Image(systemName: "slider.horizontal.3")
                     .font(.system(size: 10))
                     .foregroundStyle(DSColor.accent)
-                Text("Configuration")
+                Text(L10n.Playground.configuration)
                     .font(.system(size: 10, weight: .semibold))
                     .foregroundStyle(DSColor.Text.tertiary)
                     .textCase(.uppercase)
@@ -157,7 +157,7 @@ struct ComponentPlaygroundView<Preview: View, Controls: View>: View {
                 Image(systemName: "info.circle")
                     .font(.system(size: 10))
                     .foregroundStyle(DSColor.accent)
-                Text("About")
+                Text(L10n.Playground.about)
                     .font(.system(size: 10, weight: .semibold))
                     .foregroundStyle(DSColor.Text.tertiary)
                     .textCase(.uppercase)
@@ -195,7 +195,7 @@ struct ComponentPlaygroundView<Preview: View, Controls: View>: View {
                             .padding(.horizontal, DSSpacing.md)
                         
                         VStack(alignment: .leading, spacing: DSSpacing.sm) {
-                            Text("When to use")
+                            Text(L10n.Playground.whenToUse)
                                 .font(.system(size: 10, weight: .semibold))
                                 .foregroundStyle(DSColor.Text.tertiary)
                                 .textCase(.uppercase)
@@ -226,7 +226,7 @@ struct ComponentPlaygroundView<Preview: View, Controls: View>: View {
                             .padding(.horizontal, DSSpacing.md)
                         
                         VStack(alignment: .leading, spacing: DSSpacing.sm) {
-                            Text("Best practices")
+                            Text(L10n.Playground.bestPractices)
                                 .font(.system(size: 10, weight: .semibold))
                                 .foregroundStyle(DSColor.Text.tertiary)
                                 .textCase(.uppercase)

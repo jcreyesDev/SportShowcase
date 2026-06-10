@@ -36,22 +36,22 @@ struct SettingsView: View {
                                    accessory: .chevron,
                                    onTap: {}),
                         DSListItem(id: "onboarding",
-                                   title: "Replay Onboarding",
+                                   title: L10n.Settings.replayOnboarding,
                                    icon: "play.circle",
                                    iconColor: DSColor.Semantic.success,
                                    accessory: .chevron,
                                    onTap: {
                                        DSCoachMarkManager.shared.reset(key: "playground_onboarding")
                                    })
-                    ], header: "General")
+                    ], header: L10n.Settings.general)
                     
                     DSList(items: [
                         DSListItem(id: "version",
-                                   title: "Version",
+                                   title: L10n.Settings.version,
                                    subtitle: "1.0.0",
                                    icon: "info.circle",
                                    iconColor: DSColor.Text.tertiary)
-                    ], header: "About")
+                    ], header: L10n.Settings.about)
                 }
                 .padding(DSSpacing.lg)
             }
