@@ -2,8 +2,8 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @State private var themeManager = ThemeManager.shared
-    @State private var isDark       = false
+    private var themeManager: ThemeManager { ThemeManager.shared }
+    @State private var isDark = false
     
     var body: some View {
         NavigationStack {
@@ -34,7 +34,11 @@ struct SettingsView: View {
                                    icon: "globe",
                                    iconColor: DSColor.secondary,
                                    accessory: .chevron,
-                                   onTap: {}),
+                                   onTap: {
+                                       if let url = URL(string: UIApplication.openSettingsURLString) {
+                                           UIApplication.shared.open(url)
+                                       }
+                                   }),
                         DSListItem(id: "onboarding",
                                    title: L10n.Settings.replayOnboarding,
                                    icon: "play.circle",
@@ -56,6 +60,9 @@ struct SettingsView: View {
                 .padding(DSSpacing.lg)
             }
             .navigationTitle(L10n.Settings.title)
+            .onAppear {
+                isDark = themeManager.colorScheme == .dark
+            }
         }
     }
 }

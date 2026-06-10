@@ -80,50 +80,49 @@ struct DSListItemRow: View {
     @State private var isPressed = false
     
     var body: some View {
-        Button {
-            item.onTap?()
-        } label: {
-            HStack(spacing: DSSpacing.md) {
-                
+        HStack(spacing: DSSpacing.md) {
+            
                 // Icon
-                if let icon = item.icon {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: DSRadius.sm)
-                            .fill(item.iconColor.opacity(0.12))
-                            .frame(width: 32, height: 32)
-                        Image(systemName: icon)
-                            .font(.system(size: 15))
-                            .foregroundStyle(item.iconColor)
-                    }
+            if let icon = item.icon {
+                ZStack {
+                    RoundedRectangle(cornerRadius: DSRadius.sm)
+                        .fill(item.iconColor.opacity(0.12))
+                        .frame(width: 32, height: 32)
+                    Image(systemName: icon)
+                        .font(.system(size: 15))
+                        .foregroundStyle(item.iconColor)
                 }
-                
-                // Title + subtitle
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(item.title)
-                        .font(DSFont.body)
-                        .foregroundStyle(DSColor.Text.primary)
-                    if let subtitle = item.subtitle {
-                        Text(subtitle)
-                            .font(DSFont.caption)
-                            .foregroundStyle(DSColor.Text.tertiary)
-                    }
-                }
-                
-                Spacer()
-                
-                // Accessory
-                accessoryView
             }
-            .padding(.horizontal, DSSpacing.lg)
-            .padding(.vertical, DSSpacing.md)
-            .background(isPressed ? DSColor.Background.secondary : Color.clear)
-            .contentShape(Rectangle())
+            
+                // Title + subtitle
+            VStack(alignment: .leading, spacing: 2) {
+                Text(item.title)
+                    .font(DSFont.body)
+                    .foregroundStyle(DSColor.Text.primary)
+                if let subtitle = item.subtitle {
+                    Text(subtitle)
+                        .font(DSFont.caption)
+                        .foregroundStyle(DSColor.Text.tertiary)
+                }
+            }
+            
+            Spacer()
+            
+                // Accessory
+            accessoryView
         }
-        .buttonStyle(.plain)
+        .padding(.horizontal, DSSpacing.lg)
+        .padding(.vertical, DSSpacing.md)
+        .background(isPressed ? DSColor.Background.secondary : Color.clear)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            item.onTap?()
+        }
         .simultaneousGesture(DragGesture(minimumDistance: 0)
-            .onChanged { _ in isPressed = true }
-            .onEnded   { _ in isPressed = false })
-        .disabled(item.onTap == nil)
+            .onChanged { _ in
+                if item.onTap != nil { isPressed = true }
+            }
+            .onEnded { _ in isPressed = false })
     }
     
     @ViewBuilder
