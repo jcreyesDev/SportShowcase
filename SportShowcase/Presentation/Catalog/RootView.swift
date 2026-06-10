@@ -6,14 +6,10 @@ struct RootView: View {
     @State private var router       = NavigationRouter.shared
     @State private var themeManager = ThemeManager.shared
     @Environment(\.horizontalSizeClass) private var sizeClass
-    @Query private var teams: [Team]
     
     var body: some View {
         rootContent(for: sizeClass)
             .preferredColorScheme(themeManager.colorScheme)
-            .onAppear {
-                print("🔍 Teams in DB: \(teams.count)")
-            }
     }
     
     @ViewBuilder
@@ -33,9 +29,6 @@ struct RootView: View {
     private var detailView: some View {
         switch router.selectedItem {
             case .catalog:  CatalogView()
-            case .teams:    TeamsView()
-            case .players:  PlayersView()
-            case .matches:  MatchesView()
             case .settings: SettingsView()
             case .none:     CatalogView()
         }
