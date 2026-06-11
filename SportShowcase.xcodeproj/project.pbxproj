@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0294E1512FDACB2F00318CE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0294E1502FDACB2F00318CE3 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		02FFE39C2FCDF81F0030EB3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0294E1502FDACB2F00318CE3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		02FFE38E2FCDF81D0030EB3B /* SportShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FFE39B2FCDF81F0030EB3B /* SportShowcaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportShowcaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FFE3A52FCDF81F0030EB3B /* SportShowcaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportShowcaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		02FFE3852FCDF81D0030EB3B = {
 			isa = PBXGroup;
 			children = (
+				0294E1502FDACB2F00318CE3 /* README.md */,
 				02FFE3902FCDF81D0030EB3B /* SportShowcase */,
 				02FFE39E2FCDF81F0030EB3B /* SportShowcaseTests */,
 				02FFE3A82FCDF81F0030EB3B /* SportShowcaseUITests */,
@@ -213,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0294E1512FDACB2F00318CE3 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
